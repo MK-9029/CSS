@@ -4,4 +4,171 @@
     width: 440px;
     height: 487px;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.screen {
+    width: 59.2%;
+    height: 74%;
+    position: absolute;
+    left: 18%;
+    top: 13%;
+}
+
+/* .dial {
+    border: 1px solid #000;
+    border-radius: 50%;
+} */
+
+.dial.move {
+    width: 8em;
+    height: 8em;
+    position: absolute;
+}
+
+.dial-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4em;
+    overflow: hidden;
+}
+
+.dial.move::after {
+    content: '';
+    background-color: #000;
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+    top: 1em;
+    left: 1em;
+    position: absolute;
+
+}
+
+.dial.move .marker {
+    width: 1em;
+    height: 1em;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 0.5em);
+}
+
+.dial.move .end {
+    animation: rotate-marker-dial-1 5s .2s linear infinite;
+    transform-origin: 50% 4em;
+}
+
+.wedge {
+    width: 4em;
+    height: 8em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container1 {
+    left: 4em;
+}
+
+.container2 {
+    left: 0;
+}
+
+.container1 .wedge {
+    border-radius: 8em 0 0 8em;
+    background-color: red;
+    left: -4em;
+    transform-origin: 100% 50%;
+    animation: rotate-bg-dial-1-1 5s .2s linear infinite;
+}
+
+.container2 .wedge {
+    background-color: red;
+    border-radius: 0 8em 8em 0;
+    left: 4em;
+    transform-origin: 0 50%;
+    animation: rotate-bg-dial-1-2 5s .2s linear infinite;
+}
+
+@keyframes rotate-bg-dial-1-2 {
+    24% {
+        transform: rotate(0);
+    }
+    28%, 94% {
+        transform: rotate(40deg);
+    }
+    95%, 100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes rotate-bg-dial-1-1 {
+    0%, 6% {
+        transform: rotate(0);
+    }
+    24%, 94% {
+        transform: rotate(180deg);
+    }
+    95%, 100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes rotate-marker-dial-1 {
+    0%, 6% {
+        transform: rotate(0);
+    }
+    28%, 94% {
+        transform: rotate(220deg);
+    }
+    95%, 100% {
+        transform: rotate(0deg);
+    }
+}
+
+.dial.exercise {
+    width: 6em;
+    height: 6em;
+    top: 1em;
+    left: 1em;
+    position: absolute;
+}
+
+.dial.exercise .dial-container {
+    overflow: hidden;
+    width: 3em;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+}
+
+.dial.exercise .container1 {
+    left: 3em;
+}
+
+.dial.exercise .container1 .wedge {
+    width: 3em;
+    height: 6em;
+    border-radius: 8em 0 0 8em;
+    left: -3em;
+    background-color: #9cfc33;
+    transform-origin: 100% 50%;
+    animation: rotate-bg-dial-2-1 5s .5s linear infinite;
+}
+
+@keyframes rotate-bg-dial-2-1 {
+    0%, 6% {
+        transform: none;
+    }
+    24%, 94% {
+        transform: rotate(180deg);
+    }
+    95%, 100% {
+        transform: none;
+    }
 }

@@ -1,10 +1,11 @@
 .box1 {
     width: 40px;
-    height: 40px;
+    height: 80px;
     background-color: red;
     margin: 80px;
-    transform: rotate(90deg);
-    transform-origin: 0 0;
+    border-radius: 40px 0 0 40px;
+    transform: rotate(180deg);
+    transition: all 4s;
 }
 
 .box2 {
