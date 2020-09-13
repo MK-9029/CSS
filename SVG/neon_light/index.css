@@ -10,10 +10,10 @@ svg {
 .text {
     position: absolute;
     top: 50%;
-    font-size: 100px;
+    font-size: 60px;
     font-weight: bold;
     stroke: #3498db;
-    stroke-width: 4px;
+    stroke-width: 3px;
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
