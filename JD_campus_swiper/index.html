@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JD_campus_swiper</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="./lib/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./lib/odometer.css">
 </head>
+
 <body>
-    <script src="./lib/swiper-bundle.min.js"></script>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide p1">
                 <div class="light"></div>
                 <div class="slogon">
-                    这是一家以速度见长的
+                    这是一家以速度见长的公司
                 </div>
             </div>
-            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide p2">
+                <div class="bg"></div>
+                <div class="light"></div>
+                <div class="dog"></div>
+                <div class="text text-top">
+                    The speed of life beginning
+                </div>
+                <div class="text text-bottom">
+                    快才拥有可能，这是一家以速度见长的公司
+                </div>
+            </div>
             <div class="swiper-slide">Slide 3</div>
         </div>
     </div>
-    <script>        
-        var mySwiper = new Swiper ('.swiper-container', {
-          direction: 'vertical', // 垂直切换选项
-        })        
-        </script>
+    <script src="./lib/swiper-bundle.min.js"></script>
+    <script src="./lib/odometer.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical', // 垂直切换选项
+            on: {
+                slideChangeTransitionEnd: function () {
+                    if (this.activeIndex === 1) {
+                        p2Num.innerHTML = 0.004;
+                    }
+                }
+            }
+        })
+    </script>
 </body>
+
 </html>
